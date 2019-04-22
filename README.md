@@ -16,7 +16,8 @@ Chapter 7. Collections
             public static IEnumerable<TResult> Transform<TSource,TResult>(this IEnumerable<TSource>, ITransformer<TSource, TResult> transformer) { }
             
             public static IEnumerable<TSource> SortBy<TSource>(this IEnumerable<TSource>, IComparer<TSource> comparer) { }`
- [**Day7**](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07) 
+ 
+ -[**Day7**](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07) 
  
 2. (deadline - 21.04.2019, 24.00) Разработать обобщенный класс-коллекцию BinarySearchTree (бинарное дерево поиска). Предусмотреть возможности использования подключаемого интерфейса для реализации отношения порядка. Реализовать три способа обхода дерева: прямой (preorder), поперечный (inorder), обратный (postorder): для реализации обходов использовать блок-итератор (yield). Протестировать разработанный класс, используя следующие типы:
   - System.Int32 (использовать сравнение по умолчанию и подключаемый компаратор);
