@@ -9,9 +9,9 @@ Chapter 7. Collections
 
 ## Задачи
 
-1. (deadline - 20.04.2019, 24.00) Переобразовать методы класса ArrayExtension [Day 10]
+1. (deadline - 20.04.2019, 24.00) Переобразовать методы класса ArrayExtension [Day 10](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/tree/master/Day%2010%20-%2009.04.2019)
 [**Day7**](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07) 
-(https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/tree/master/Day%2010%20-%2009.04.2019) в обобщенно-типизированные методы расширений типизированного интерфейса `IEnumerable<T>`
+ в обобщенно-типизированные методы расширений типизированного интерфейса `IEnumerable<T>`
       
             public static IEnumerable<TSource> Filter<TSource>(this IEnumerable<TSource> source, IPredicate<TSource> predicate) { }
             
