@@ -39,7 +39,7 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 `Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `ObservableCollection<T>` | O(1) | - | - | O(1) amortized| O(n) | |
-`KeyCollection<TKey,TItem>`  | | | | | | |
+`KeyCollection<TKey,TItem>`  | O(1) | | | | | Holds Dictionary<TKey, TItem> instance.|
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
 **Словари** | | | | | | |  
@@ -65,7 +65,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Collection<T>` | `List<T>` | Linear search| No | Yes | Index | No |
 `BindingList<T>` | `Collection<T>` | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | `Collection<T>` | Linear search | No | Yes | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
+`KeyCollection<TKey,TItem>`  | ` Dictionary<TKey,TItem>` | Linear search / BinarySearch** | No | Yes | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
 **Словари** | | | | | | | 
@@ -80,3 +80,5 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 **Очередь, стек** | | | | | | | 
 `Queue<T>` | | | | | | | 
 `Stack<T>` | | | | | | | 
+
+** - The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
