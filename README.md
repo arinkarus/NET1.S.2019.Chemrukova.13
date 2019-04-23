@@ -30,7 +30,7 @@ Done
 
 3. (deadline - 23.04.2019, 24.00) Заполните таблицу
 
-Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |  Memory | 
+Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal |  Memory | 
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
 `T[]` | O(1) | - | - | - | - | Elements + additional info (like array's length) |
@@ -40,8 +40,8 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `ObservableCollection<T>` | O(1) | - | - | O(1) amortized| O(n) | |
 `KeyCollection<TKey,TItem>`  | O(1) | O(1), O(n) (collision) - if dictionary is created / O(n) |  | | | Holds Dictionary<TKey, TItem> instance.|
-`ReadOnlyCollection<T>`  | | | | | | |
-`ReadOnlyObservableCollection<T>`  | | | | | | |
+`ReadOnlyCollection<T>`  | O(n) | - | - | - | - | |
+`ReadOnlyObservableCollection<T>`  | O(n) | - | - | - | - | |
 **Словари** | | | | | | |  
 `Dictionary<TKey, TValue>` | | | | | | | 
 `SortedList<T>` | O(1) |  O(log n) | O(n) | O(n)* | O(n) | | 
@@ -66,8 +66,8 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `BindingList<T>` | `Collection<T>` | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
 `KeyCollection<TKey,TItem>`  | `Collection<T>`, `Dictionary<TKey,TItem>` - instance is created if key count is greater than threshold  | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
-`ReadOnlyCollection<T>`  | | | | | | |
-`ReadOnlyObservableCollection<T>`  | | | | | | |
+`ReadOnlyCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
+`ReadOnlyObservableCollection<T>`  | `ReadOnlyCollection<T>`, wrapper for `ObservableCollection<T>` | Linear search | No | Yes | Index | No |
 **Словари** | | | | | | | 
 `Dictionary<TKey, TValue>` | | | | | | |  
 `SortedList<T>` | 2 arrays | Binary search | Sorted | Yes | Key, Index | Yes |
