@@ -34,7 +34,7 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
 `T[]` | O(1) | - | - | - | - | Elements + additional info (like array's length) |
-`List<T>` | | | | | | |
+`List<T>` | O(1)| - | O(n)| O(1) amortized| Remove - О(n - k), k - index of item to be deleted, RemoveAt - O(n) | Array, capacity, count |
 `LinkedList<T>` | | | | | | |
 `Collection<T>` | | | | | | |
 `BindingList<T>` | | | | | | |
@@ -60,7 +60,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
 `T[]` | System.Array | - | No | Yes | Index | No |
-`List<T>` | | | | | Index | |
+`List<T>` | Array | | | No | Index | No |
 `LinkedList<T>` | | | | | | |
 `Collection<T>` | | | | | | |
 `BindingList<T>` | | | | | | |
