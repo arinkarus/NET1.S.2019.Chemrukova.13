@@ -58,8 +58,8 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 * `**` Removing complexity is O(n – k) where k is the index of the element you’re removing; trimming
 the tail of a list is cheaper than removing the head. Removing by value instead of by index (Remove rather than
 RemoveAt) - O(n).
-* `**` The worst case is when the hash values of all elements in the table are the same.
-* `***` Insertion O(1) for already ordered data.
+* `***` The worst case is when the hash values of all elements in the table are the same.
+* `****` Insertion O(1) for already ordered data.
  
 Collection | Underlying structure | Lookup strategy | Ordering | Contiguous storage | Data access | Exposes Key & Value collection | 
 -|-|-|-|-|-|-|
