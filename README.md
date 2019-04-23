@@ -41,7 +41,7 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `Collection<T>` | O(n) | - | O(n) | O(n) | O(n) | |
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `ObservableCollection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
-`KeyCollection<TKey, TItem>`  | O(1) | O(1)*** / O(n) |  | | | Can hold a reference to Dictionary<TKey, TItem> instance. |
+`KeyCollection<TKey, TItem>`  | O(1) | O(1)*** / O(n) |  | | | Can hold a reference to `Dictionary<TKey, TItem>` instance. |
 `ReadOnlyCollection<T>`  | O(1) | - | - | - | - | |
 `ReadOnlyObservableCollection<T>`  | O(1) | - | - | - | - | |
 **Словари** | | | | | | |  
@@ -89,6 +89,6 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Queue<T>` | Array | Linear search | No | Yes | Value, Head | No | 
 `Stack<T>` | Array | Linear search | No | Yes | Value, Head | No | 
 
-* `* Instance of dictionary is created if key count is greater than threshold.
-* `** The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
-* `*** `A HashSet<T>` class can be thought of as a Dictionary<TKey,TValue> collection without values.
+* `*` Instance of dictionary is created if key count is greater than threshold.
+* `**` The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
+* `***` A HashSet<T>` class can be thought of as a Dictionary<TKey,TValue> collection without values.
