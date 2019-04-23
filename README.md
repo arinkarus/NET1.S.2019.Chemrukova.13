@@ -39,7 +39,7 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `ObservableCollection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
-`KeyCollection<TKey,TItem>`  | O(1) | O(1)* / O(n) |  | | | Holds Dictionary<TKey, TItem> instance.|
+`KeyCollection<TKey,TItem>`  | O(1) | O(1)* / O(n) |  | | | Can hold a reference to Dictionary<TKey, TItem> instance.|
 `ReadOnlyCollection<T>`  | O(1) | - | - | - | - | |
 `ReadOnlyObservableCollection<T>`  | O(1) | - | - | - | - | |
 **Словари** | | | | | | |  
@@ -66,7 +66,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Collection<T>` | `IList<T>` | Linear search | No | Yes | Index | No |
 `BindingList<T>` | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | Derived from `Collection<T>`, can hold `Dictionary<TKey,TItem>`* instance | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
+`KeyCollection<TKey,TItem>`  | Derived from `Collection<T>`, `Dictionary<TKey,TItem>`* | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
 `ReadOnlyCollection<T>`  | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
 `ReadOnlyObservableCollection<T>` |  Derived from `ReadOnlyCollection<T>`, read-only wrapper for `ObservableCollection<T>` | Linear search | No | Yes | Index | No |
 **Словари** | | | | | | | 
