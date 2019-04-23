@@ -60,8 +60,8 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
 `T[]` | System.Array | - | No | Yes | Index | No |
-`List<T>` | Array | Linear search | | No | Index | No |
-`LinkedList<T>` | Nodes | Linear search | No | | | |
+`List<T>` | Array | Linear search | No | Yes | Index | No |
+`LinkedList<T>` | Nodes | Linear search | No | No | Property "Value" of node | No |
 `Collection<T>` | | | | | | |
 `BindingList<T>` | | | | | | |
 `ObservableCollection<T>`  | | | | | | |
