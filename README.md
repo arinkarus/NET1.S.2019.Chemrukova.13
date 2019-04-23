@@ -64,7 +64,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `LinkedList<T>` | Nodes | Linear search | No | No | Property "Value" of node | No |
 `Collection<T>` | List<T> | Linear search| No | Yes | Index | No |
 `BindingList<T>` | Collection<T> | Linear search | No | Yes | Index | No |
-`ObservableCollection<T>`  | | | | | | |
+`ObservableCollection<T>`  | Collection><T> | Linear search | No | Yes | Index | No |
 `KeyCollection<TKey,TItem>`  | | | | | | |
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
