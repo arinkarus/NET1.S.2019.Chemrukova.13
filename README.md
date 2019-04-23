@@ -65,7 +65,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Collection<T>` | `List<T>` | Linear search| No | Yes | Index | No |
 `BindingList<T>` | `Collection<T>` | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | ` Dictionary<TKey,TItem>` | Linear search / BinarySearch** | No | Yes | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
+`KeyCollection<TKey,TItem>`  | `Collection<T>`, Dictionary<TKey,TItem>` - instance is created if key count is greater than threshold  | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
 **Словари** | | | | | | | 
