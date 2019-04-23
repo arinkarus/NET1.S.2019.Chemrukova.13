@@ -82,5 +82,5 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Queue<T>` | | | | | | | 
 `Stack<T>` | | | | | | | 
 
-* Instance of dictionary is created if key count is greater than threshold.
-** The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
+* `* Instance of dictionary is created if key count is greater than threshold.
+* `** The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
