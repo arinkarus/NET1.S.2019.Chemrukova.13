@@ -39,7 +39,7 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 `Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `ObservableCollection<T>` | O(1) | - | - | O(1) amortized| O(n) | |
-`KeyCollection<TKey,TItem>`  | O(1) | O(1), O(n) if collision (if dictionary is created) / O(n) |  | | | Holds Dictionary<TKey, TItem> instance.|
+`KeyCollection<TKey,TItem>`  | O(1) | O(1), O(n) (collision) - if dictionary is created / O(n) |  | | | Holds Dictionary<TKey, TItem> instance.|
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
 **Словари** | | | | | | |  
