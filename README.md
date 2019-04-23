@@ -34,17 +34,17 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
 `T[]` | O(1) | - | - | - | - | Elements + additional info (like array's length) |
-`List<T>` | O(1)| - | O(n)| O(1) amortized* | O(n – k) / O(n)* | Array, array's capacity, count |
+`List<T>` | O(1)| - | O(n)| O(1) amortized* | O(n – k) / O(n)** | Array, array's capacity, count |
 `LinkedList<T>` | - | - | - | O(1), before/after given node | 	O(1), before/after given node | Head, count |
 `Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `ObservableCollection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
-`KeyCollection<TKey,TItem>`  | O(1) | O(1)** / O(n) |  | | | Can hold a reference to Dictionary<TKey, TItem> instance. |
+`KeyCollection<TKey,TItem>`  | O(1) | O(1)*** / O(n) |  | | | Can hold a reference to Dictionary<TKey, TItem> instance. |
 `ReadOnlyCollection<T>`  | O(1) | - | - | - | - | |
 `ReadOnlyObservableCollection<T>`  | O(1) | - | - | - | - | |
 **Словари** | | | | | | |  
 `Dictionary<TKey, TValue>` | O(n) | O(1) | O(n) | O(1) | O(1) | | 
-`SortedList<T>` | O(1) |  O(log n) | O(n) | O(n)*** | O(n) | | 
+`SortedList<T>` | O(1) |  O(log n) | O(n) | O(n)**** | O(n) | | 
 `SortedDictionary<TKey,TValue>` | n/a | O(log n) | O(n) | O(log n) | O(log n) |  | 
 `ReadOnlyDictionary<T>`  | | | | | | |
 **Множества** | | | | | | | 
@@ -54,7 +54,8 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `Queue<T>` | | | | | | | 
 `Stack<T>` | | | | | | | 
 
-* `*` Removing complexity is O(n – k) where k is the index of the element you’re removing; trimming
+* `*` If there is no need to expand array. Otherwise - O(n).
+* `**` Removing complexity is O(n – k) where k is the index of the element you’re removing; trimming
 the tail of a list is cheaper than removing the head. Removing by value instead of by index (Remove rather than
 RemoveAt) - O(n).
 * `**` The worst case is when the hash values of all elements in the table are the same.
