@@ -43,7 +43,7 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `ReadOnlyCollection<T>`  | O(1) | - | - | - | - | |
 `ReadOnlyObservableCollection<T>`  | O(1) | - | - | - | - | |
 **Словари** | | | | | | |  
-`Dictionary<TKey, TValue>` | O(n) | O(1) | O(n) | O(1) | O(1) | | 
+`Dictionary<TKey, TValue>` | - | O(1) | O(n) | O(1) | O(1) | | 
 `SortedList<T>` | O(1) |  O(log n) | O(n) | O(n)**** | O(n) | | 
 `SortedDictionary<TKey,TValue>` | n/a | O(log n) | O(n) | O(log n) | O(log n) |  | 
 `ReadOnlyDictionary<T>`  | | | | | | |
