@@ -59,8 +59,8 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 Collection | Underlying structure | Lookup strategy | Ordering | Contiguous storage | Data access | Exposes Key & Value collection | 
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
-`T[]` | | | | | | |
-`List<T>` | | | | | | |
+`T[]` | System.Array | | No | | Index | No |
+`List<T>` | | | | | Index | |
 `LinkedList<T>` | | | | | | |
 `Collection<T>` | | | | | | |
 `BindingList<T>` | | | | | | |
