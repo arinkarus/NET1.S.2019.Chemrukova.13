@@ -40,8 +40,8 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `ObservableCollection<T>` | O(1) | - | - | O(1) amortized| O(n) | |
 `KeyCollection<TKey,TItem>`  | O(1) | O(1), O(n) (collision) - if dictionary is created / O(n) |  | | | Holds Dictionary<TKey, TItem> instance.|
-`ReadOnlyCollection<T>`  | O(n) | - | - | - | - | |
-`ReadOnlyObservableCollection<T>`  | O(n) | - | - | - | - | |
+`ReadOnlyCollection<T>`  | O(1) | - | - | - | - | |
+`ReadOnlyObservableCollection<T>`  | O(1) | - | - | - | - | |
 **Словари** | | | | | | |  
 `Dictionary<TKey, TValue>` | | | | | | | 
 `SortedList<T>` | O(1) |  O(log n) | O(n) | O(n)* | O(n) | | 
