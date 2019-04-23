@@ -63,11 +63,11 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `T[]` | `System.Array` | - | No | Yes | Index | No |
 `List<T>` | Array | Linear search | No | Yes | Index | No |
 `LinkedList<T>` | Nodes | Linear search | No | No | Property "Value" of node | No |
-`Collection<T>` | `List<T>` | Linear search| No | Yes | Index | No |
-`BindingList<T>` | `Collection<T>` | Linear search | No | Yes | Index | No |
-`ObservableCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | `Collection<T>`, `Dictionary<TKey,TItem>` - instance is created if key count is greater than threshold  | Linear search / BinarySearch* | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
-`ReadOnlyCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
+`Collection<T>` | `IList<T>` | Linear search | No | Yes | Index | No |
+`BindingList<T>` | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
+`ObservableCollection<T>`  | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
+`KeyCollection<TKey,TItem>`  | Derived from `Collection<T>`, `Dictionary<TKey,TItem>`* | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
+`ReadOnlyCollection<T>`  | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
 `ReadOnlyObservableCollection<T>`  | `ReadOnlyCollection<T>`, wrapper for `ObservableCollection<T>` | Linear search | No | Yes | Index | No |
 **Словари** | | | | | | | 
 `Dictionary<TKey, TValue>` | | | | | | |  
@@ -82,4 +82,5 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Queue<T>` | | | | | | | 
 `Stack<T>` | | | | | | | 
 
-* - The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
+* Instance of dictionary is created if key count is greater than threshold.
+** The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
