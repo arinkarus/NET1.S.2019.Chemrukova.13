@@ -36,9 +36,9 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 `T[]` | O(1) | - | - | - | - | Elements + additional info (like array's length) |
 `List<T>` | O(1)| - | O(n)| O(1) amortized | O(n) | Array, array's capacity, count |
 `LinkedList<T>` | - | - | - | O(1) | 	O(1), before/after given node | Head, count |
-`Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | `List<T>` instance |
-`BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | `Collection<T>` instance |
-`ObservableCollection<T>` | | | | | | |
+`Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
+`BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
+`ObservableCollection<T>` | O(1) | - | - | O(1) amortized| O(n) | |
 `KeyCollection<TKey,TItem>`  | | | | | | |
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
@@ -62,10 +62,10 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `T[]` | System.Array | - | No | Yes | Index | No |
 `List<T>` | Array | Linear search | No | Yes | Index | No |
 `LinkedList<T>` | Nodes | Linear search | No | No | Property "Value" of node | No |
-`Collection<T>` | List<T> | Linear search| No | Yes | Index | No |
-`BindingList<T>` | Collection<T> | Linear search | No | Yes | Index | No |
-`ObservableCollection<T>`  | Collection><T> | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | | | | | Key, Index| Yes *Unlike normal dictionaries, a key must be built into an element, not exist independently. |
+`Collection<T>` | `List<T>` | Linear search| No | Yes | Index | No |
+`BindingList<T>` | `Collection<T>` | Linear search | No | Yes | Index | No |
+`ObservableCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
+`KeyCollection<TKey,TItem>`  | `Collection<T>` | Linear search | No | Yes | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
 **Словари** | | | | | | | 
