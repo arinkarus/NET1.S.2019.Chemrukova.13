@@ -59,13 +59,13 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 Collection | Underlying structure | Lookup strategy | Ordering | Contiguous storage | Data access | Exposes Key & Value collection | 
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
-`T[]` | System.Array | - | No | Yes | Index | No |
+`T[]` | `System.Array` | - | No | Yes | Index | No |
 `List<T>` | Array | Linear search | No | Yes | Index | No |
 `LinkedList<T>` | Nodes | Linear search | No | No | Property "Value" of node | No |
 `Collection<T>` | `List<T>` | Linear search| No | Yes | Index | No |
 `BindingList<T>` | `Collection<T>` | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | `Collection<T>`, Dictionary<TKey,TItem>` - instance is created if key count is greater than threshold  | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
+`KeyCollection<TKey,TItem>`  | `Collection<T>`, `Dictionary<TKey,TItem>` - instance is created if key count is greater than threshold  | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
 **Словари** | | | | | | | 
