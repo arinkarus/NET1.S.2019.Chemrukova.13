@@ -34,9 +34,9 @@ Collection | Indexed lookup| Keyed lookup | Value lookup | Addition |  Removal |
 -|-|-|-|-|-|-|
 **Списки** | | | | | | |  
 `T[]` | O(1) | - | - | - | - | Elements + additional info (like array's length) |
-`List<T>` | O(1)| - | O(n)| O(1) amortized| Remove - О(n - k), k - index of item to be deleted, RemoveAt - O(n) | Array, array's capacity, count |
+`List<T>` | O(1)| - | O(n)| O(1) amortized | O(n) | Array, array's capacity, count |
 `LinkedList<T>` | - | - | - | O(1) | 	O(1), before/after given node | Head, count |
-`Collection<T>` | | | | | | |
+`Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | List<T> instance |
 `BindingList<T>` | | | | | | |
 `ObservableCollection<T>`  | | | | | | |
 `KeyCollection<TKey,TItem>`  | | | | | | |
