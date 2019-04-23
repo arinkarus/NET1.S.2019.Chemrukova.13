@@ -70,7 +70,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Collection<T>` | `IList<T>` | Linear search | No | Yes | Index | No |
 `BindingList<T>` | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | Derived from `Collection<T>`, `Dictionary<TKey,TItem>`* | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
+`KeyCollection<TKey,TItem>`  | Derived from `Collection<T>`, can create `Dictionary<TKey,TItem>`* | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
 `ReadOnlyCollection<T>`  | Derived from `Collection<T>` | Linear search | No | Yes | Index | No |
 `ReadOnlyObservableCollection<T>` |  Derived from `ReadOnlyCollection<T>`, read-only wrapper for `ObservableCollection<T>` | Linear search | No | Yes | Index | No |
 **Словари** | | | | | | | 
