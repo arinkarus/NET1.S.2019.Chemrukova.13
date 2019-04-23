@@ -65,7 +65,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Collection<T>` | List<T> | Linear search| No | Yes | Index | No |
 `BindingList<T>` | Collection<T> | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | Collection><T> | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | | | | | | |
+`KeyCollection<TKey,TItem>`  | | | | | Key, Index| Yes *Unlike normal dictionaries, a key must be built into an element, not exist independently. |
 `ReadOnlyCollection<T>`  | | | | | | |
 `ReadOnlyObservableCollection<T>`  | | | | | | |
 **Словари** | | | | | | | 
