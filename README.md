@@ -38,8 +38,8 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `LinkedList<T>` | - | - | - | O(1) | 	O(1), before/after given node | Head, count |
 `Collection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
 `BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
-`ObservableCollection<T>` | O(1) | - | - | O(1) amortized| O(n) | |
-`KeyCollection<TKey,TItem>`  | O(1) | O(1), O(n) (collision) - if dictionary is created / O(n) |  | | | Holds Dictionary<TKey, TItem> instance.|
+`ObservableCollection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
+`KeyCollection<TKey,TItem>`  | O(1) | O(1)* / O(n) |  | | | Holds Dictionary<TKey, TItem> instance.|
 `ReadOnlyCollection<T>`  | O(1) | - | - | - | - | |
 `ReadOnlyObservableCollection<T>`  | O(1) | - | - | - | - | |
 **Словари** | | | | | | |  
@@ -54,7 +54,8 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `Queue<T>` | | | | | | | 
 `Stack<T>` | | | | | | | 
 
-* `*`Вставка O(1) для уже упорядоченных данных.
+* `*` The worst case is when the hash values of all elements in the table are the same.
+* `**`Вставка O(1) для уже упорядоченных данных.
  
 Collection | Underlying structure | Lookup strategy | Ordering | Contiguous storage | Data access | Exposes Key & Value collection | 
 -|-|-|-|-|-|-|
@@ -65,7 +66,7 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Collection<T>` | `List<T>` | Linear search| No | Yes | Index | No |
 `BindingList<T>` | `Collection<T>` | Linear search | No | Yes | Index | No |
 `ObservableCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
-`KeyCollection<TKey,TItem>`  | `Collection<T>`, `Dictionary<TKey,TItem>` - instance is created if key count is greater than threshold  | Linear search / BinarySearch** | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
+`KeyCollection<TKey,TItem>`  | `Collection<T>`, `Dictionary<TKey,TItem>` - instance is created if key count is greater than threshold  | Linear search / BinarySearch* | No |  | Key, Index | Yes. A requirement is that the key is somewhere inside the value. |
 `ReadOnlyCollection<T>`  | `Collection<T>` | Linear search | No | Yes | Index | No |
 `ReadOnlyObservableCollection<T>`  | `ReadOnlyCollection<T>`, wrapper for `ObservableCollection<T>` | Linear search | No | Yes | Index | No |
 **Словари** | | | | | | | 
@@ -81,4 +82,4 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Queue<T>` | | | | | | | 
 `Stack<T>` | | | | | | | 
 
-** - The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
+* - The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
