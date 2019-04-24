@@ -28,7 +28,7 @@ Done - [**Day7**](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07)
   
 Done
 
-3. (deadline - 23.04.2019, 24.00) Заполните таблицу
+
 3. (deadline - 23.04.2019, 24.00) Заполните таблицу
 Collection | Indexed lookup | Keyed lookup | Value lookup | Addition | Removal | Memory | 
 -|-|-|-|-|-|-|
@@ -58,7 +58,7 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition | Removal |
 `Dictionary<TKey, TValue>` | - | O(1) | O(n) | O(1) | O(1) | | 
 `SortedList<TKey, TValue>` | O(1) | O(log n) | O(n) | O(n)**** | O(n) | | 
 `SortedDictionary<TKey, TValue>` | - | O(log n) | O(n) | O(log n) | O(log n) | `SortedList<TKey, TValue>` uses less memory than `SortedDictionary<TKey,TValue>`. |
-`ReadOnlyDictionary<TKey, TValue> `  | - | O(1) | O(n) | - | - | ***** |
+`ReadOnlyDictionary<TKey, TValue> `  | - | O(1) | O(n) | - | - | |
 **Множества** | | | | | | | 
 `HashSet<T>` | - | - | 	O(1)*** | O(1)*** | O(1)*** | | 
 `SortedSet<T>` | - | - | O(log n) | O(log n) | O(log n) | | 
