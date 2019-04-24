@@ -60,9 +60,9 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 * `**` Removing complexity is O(n – k) where k is the index of the element you’re removing; trimming
 the tail of a list is cheaper than removing the head. Removing by value instead of by index (Remove rather than
 RemoveAt) - O(n).
-* `***` The worst case is when the hash values of all elements in the table are the same.
+* `***` O(n) if collision.
 * `****` Insertion O(1) for already ordered data.
-* `*****` O(n) if collision.
+* `*****` Read-only => agregation in constructor => Explicit interface implementations => `NotSupported_ReadOnlyCollection` at methods like Remove, Add, Clear ... .
 
 Collection | Underlying structure | Lookup strategy | Ordering | Contiguous storage | Data access | Exposes Key & Value collection | 
 -|-|-|-|-|-|-|
@@ -86,8 +86,8 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `SortedSet<T>` | Red-black tree | Binary search | Sorted | Yes | Value | No | 
 | | | | | | | 
 **Очередь, стек** | | | | | | | 
-`Queue<T>` | Array | Linear search | No | Yes | Value, Head | No | 
-`Stack<T>` | Array | Linear search | No | Yes | Value, Head | No | 
+`Queue<T>` | Array | Linear search | No | Yes | Index, Pop | No | 
+`Stack<T>` | Array | Linear search | No | Yes | Index, Pop| No | 
 
 * `*` Instance of dictionary is created if key count is greater than threshold.
 * `**` The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
