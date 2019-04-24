@@ -38,12 +38,12 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal 
 `T[]` | O(1) | - | O(n) | O(n) | O(n) | Elements + additional info (like array's length) |
 `List<T>` | O(1)| - | O(n)| O(1) amortized* | O(n – k) / O(n)** | Array, array's capacity, count |
 `LinkedList<T>` | O(n) | - | - | O(1), before/after given node, otherwise O(n) | O(1), before/after given node, otherwise O(n) | Head, count |
-`Collection<T>` | O(n) | - | O(n) | O(n) | O(n) | |
-`BindingList<T>` | O(1) | - | - | O(1) amortized | O(n) | |
-`ObservableCollection<T>` | O(1) | - | - | O(1) amortized | O(n) | |
-`KeyCollection<TKey, TItem>`  | O(1) | O(1)*** / O(n) |  | | | Can hold a reference to `Dictionary<TKey, TItem>` instance. |
-`ReadOnlyCollection<T>`  | O(1) | - | - | - | - | |
-`ReadOnlyObservableCollection<T>`  | O(1) | - | - | - | - | |
+`Collection<T>` | O(1) | - | O(n) | O(1)* | O(n – k) / O(n)** | |
+`BindingList<T>` | O(1) | - | O(n)| O(1)* | O(n – k) / O(n)** | |
+`ObservableCollection<T>` | O(1) | - | O(n) | O(1)* | O(n – k) / O(n)** | |
+`KeyCollection`  | - | - | O(1)(values is keys from `Dictionary<TKey, TValue>`) | - | - | ***** |
+`ReadOnlyCollection<T>`  | O(1) | - | O(n) | - | - | ***** |
+`ReadOnlyObservableCollection<T>`  | O(1) | - | O(n)  | - | - | ***** |
 **Словари** | | | | | | |  
 `Dictionary<TKey, TValue>` | - | O(1) | O(n) | O(1) | O(1) | | 
 `SortedList<TKey, TValue>` | O(1) |  O(log n) | O(n) | O(n)**** | O(n) | | 
