@@ -39,9 +39,21 @@ Collection | Indexed lookup | Keyed lookup | Value lookup | Addition | Removal |
 `Collection<T>` | O(1) | - | O(n) | O(1)* | O(n – k) / O(n)** | |
 `BindingList<T>` | O(1) | - | O(n)| O(1)* | O(n – k) / O(n)** | |
 `ObservableCollection<T>` | O(1) | - | O(n) | O(1)* | O(n – k) / O(n)** | |
-`KeyCollection`  | - | - | O(1)(values is keys from `Dictionary<TKey, TValue>`) | - | - | ***** |
-`ReadOnlyCollection<T>`  | O(1) | - | O(n) | - | - | ***** |
-`ReadOnlyObservableCollection<T>`  | O(1) | - | O(n)  | - | - | ***** |
+`KeyCollection`  | - | - | O(1)(values is keys from `Dictionary<TKey, TValue>`) | - | - | |
+`ReadOnlyCollection<T>`  | O(1) | - | O(n) | - | - | |
+`ReadOnlyObservableCollection<T>`  | O(1) | - | O(n)  | - | - | |
+**Словари** | | | | | | |  
+`Dictionary<TKey, TValue>` | - | O(1) | O(n) | O(1) | O(1) | | 
+`SortedList<TKey, TValue>` | O(1) | O(log n) | O(n) | O(n)**** | O(n) | | 
+`SortedDictionary<TKey, TValue>` | - | O(log n) | O(n) | O(log n) | O(log n) | `SortedList<TKey, TValue>` uses less memory than `SortedDictionary<TKey,TValue>`. |
+`ReadOnlyDictionary<TKey, TValue> `  | - | O(1) | O(n) | - | - | |
+**Множества** | | | | | | | 
+`HashSet<T>` | - | - | 	O(1)*** | O(1)*** | O(1)*** | | 
+`SortedSet<T>` | - | - | O(log n) | O(log n) | O(log n) | | 
+**Очередь, стек** | | | | | | | 
+`Queue<T>` | O(1) | - | O(n) | O(1) | O(1) | | 
+`Stack<T>` | O(1) | - | O(n) | O(1) | O(1) | |
+
 **Словари** | | | | | | |  
 `Dictionary<TKey, TValue>` | - | O(1) | O(n) | O(1) | O(1) | | 
 `SortedList<TKey, TValue>` | O(1) | O(log n) | O(n) | O(n)**** | O(n) | | 
