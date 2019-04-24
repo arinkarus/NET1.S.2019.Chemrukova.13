@@ -90,5 +90,5 @@ Collection | Underlying structure | Lookup strategy | Ordering | Contiguous stor
 `Stack<T>` | Array | Linear search | No | Yes | Index, Pop| No | 
 
 * `*` Instance of dictionary is created if key count is greater than threshold.
-* `**` The KeyedCollection<> can be configured to not create an internal Dictionary<>, depending on the number of items.
+* `**` The KeyedCollection<TKey, TItem> can be configured to not create an internal Dictionary<>, depending on the number of items.
 * `***` A HashSet<T>` class can be thought of as a Dictionary<TKey,TValue> collection without valu
