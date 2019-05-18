@@ -27,9 +27,9 @@ Chapter 7. Collections
 3. (deadline - 23.04.2019, 24.00) Заполните таблицу
 
 #Реализация (Done)
-1. -[Решение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07/blob/master/ArrayExtension/ArrayExtension.cs) 
-2. -[Решение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.13/blob/master/BinarySearchTree/BinaryTree.cs)
-   -[Тесты](https://github.com/arinkarus/NET1.S.2019.Chemrukova.13/blob/master/BinarySearchTree.Tests/BinarySearchTests.cs)
+1. - [Решение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07/blob/master/ArrayExtension/ArrayExtension.cs) 
+2. - [Решение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.13/blob/master/BinarySearchTree/BinaryTree.cs)
+   - [Тесты](https://github.com/arinkarus/NET1.S.2019.Chemrukova.13/blob/master/BinarySearchTree.Tests/BinarySearchTests.cs)
 
 
 Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal |  Memory | 
