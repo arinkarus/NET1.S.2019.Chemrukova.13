@@ -18,19 +18,19 @@ Chapter 7. Collections
             
             public static IEnumerable<TSource> SortBy<TSource>(this IEnumerable<TSource>, IComparer<TSource> comparer) { }`
 
-Done - [**Day7**](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07)  
-
 2. (deadline - 21.04.2019, 24.00) Разработать обобщенный класс-коллекцию BinarySearchTree (бинарное дерево поиска). Предусмотреть возможности использования подключаемого интерфейса для реализации отношения порядка. Реализовать три способа обхода дерева: прямой (preorder), поперечный (inorder), обратный (postorder): для реализации обходов использовать блок-итератор (yield). Протестировать разработанный класс, используя следующие типы:
   - System.Int32 (использовать сравнение по умолчанию и подключаемый компаратор);
   - System.String (использовать сравнение по умолчанию и подключаемый компаратор);
   - пользовательский класс Book, для объектов которого реализовано отношения порядка (использовать сравнение по умолчанию и подключаемый компаратор);
   - пользовательскую структуру Point, для объектов которого не реализовано отношения порядка (использовать подключаемый компаратор).
-  
-Done
 
 3. (deadline - 23.04.2019, 24.00) Заполните таблицу
 
-3. (deadline - 23.04.2019, 24.00) Заполните таблицу
+#Реализация (Done)
+1. -[Решение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.07/blob/master/ArrayExtension/ArrayExtension.cs) 
+2. -[Решение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.13/blob/master/BinarySearchTree/BinaryTree.cs)
+   -[Тесты](https://github.com/arinkarus/NET1.S.2019.Chemrukova.13/blob/master/BinarySearchTree.Tests/BinarySearchTests.cs)
+
 
 Collection | Indexed lookup | Keyed lookup | Value lookup | Addition |  Removal |  Memory | 
 -|-|-|-|-|-|-|
